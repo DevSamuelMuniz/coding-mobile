@@ -1,0 +1,56 @@
+.home-main{
+    margin: 1rem;
+    padding: 1rem;
+    background: rgba(27, 212, 27, 0.185);
+    height: 100%;
+
+    border-radius: 2rem;
+}
+
+.content-saldo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 2rem;
+
+}
+
+.saldo-atual > h1 {
+  font-size: 1rem;
+  color: rgb(90, 90, 90);
+}
+
+.saldo-atual h2 {
+    font-size: 1.7krem;
+  color: rgb(32, 32, 32);
+}
+
+.seta-img {
+  width: 1.7rem;
+  height: auto;
+  rotate: 180deg;
+}
+
+.content-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.button {
+  padding: 0.6rem 1rem;
+  background-color: rgb(244, 252, 243);
+  border: 1px solid rgb(41, 150, 41);
+  border-radius: 2rem;
+  color: rgb(41, 150, 41);
+  transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: rgb(97, 179, 97);
+  color: white;
+  scale: 1.1;
+}
