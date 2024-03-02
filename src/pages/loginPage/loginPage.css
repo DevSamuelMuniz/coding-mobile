@@ -1,0 +1,56 @@
+.content-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.img-logo {
+  width: 14rem;
+  margin-top: 10rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.form-input {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  width: 60vw;
+  height: 1.4rem;
+  border: 1px solid #142141;
+}
+
+.form-input:hover {
+  border-color: #8397c8;
+}
+
+.btn-entrar {
+  background: none;
+  border: 1px solid #8397c8;
+  width: 16vh;
+  height: 2rem;
+  border-radius: 1rem;
+}
+
+.outros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: #8397c8;
+}
+
+p {
+  margin: 0;
+  padding-top: 1rem;
+}
