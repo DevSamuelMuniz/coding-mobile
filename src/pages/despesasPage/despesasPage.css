@@ -56,3 +56,12 @@
 
     color: #2c3f70;
 }
+
+.despesas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}

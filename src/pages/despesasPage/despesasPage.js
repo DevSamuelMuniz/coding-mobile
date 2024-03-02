@@ -57,7 +57,7 @@ function DespesasPage() {
           <button className='btn-input' onClick={handleSubmit}>Adicionar Despesa</button>
         </div>
 
-        <div>
+        <div className='despesas'>
           {despesas.map((despesa, index) => (
             <DespesaComponent key={index} nomeDespesa={despesa.nomeDespesa} valorDespesa={despesa.valorDespesa} />
           ))}
