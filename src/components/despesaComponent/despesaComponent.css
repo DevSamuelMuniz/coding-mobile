@@ -1,0 +1,13 @@
+.despesas-content{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+
+    padding: 0 1rem;
+
+    background: linear-gradient(to right, #2c3f70, #8397c8);
+    -webkit-background-clip: text;
+    color: transparent;
+}

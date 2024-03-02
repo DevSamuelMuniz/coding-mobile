@@ -11,7 +11,7 @@ function HomePage() {
       <HeaderComponent />
       <SaldoComponent />
       <div className="btn-comp">
-        <ButtonComponent link={"/"} titulo="Minhas Despesas" />
+        <ButtonComponent link={"/Despesas"} titulo="Minhas Despesas" />
         <ButtonComponent link={"/"} titulo="Meus Ganhos" />
         <ButtonComponent link={"/"} titulo="Meu Perfil" />
       </div>

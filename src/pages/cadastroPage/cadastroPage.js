@@ -2,6 +2,10 @@ import "./cadastroPage.css";
 import React from "react";
 import Logo from "../../assets/img/logo.png";
 
+function redirectLogin(){
+  window.location.href = "/";
+}
+
 function LoginPage() {
   return (
     <div className="content-login">
@@ -37,7 +41,7 @@ function LoginPage() {
 
           <button 
           className="btn-entrar" 
-          type="submit">
+          type="button" onClick={redirectLogin}>
             Cadastrar
           </button>
 
