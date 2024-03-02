@@ -1,0 +1,17 @@
+.link-btn {
+  text-decoration: none;
+  background: linear-gradient(to left, #2c3f70, #8397c8);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  border: 2px solid #8397c8;
+  border-radius: 0.4rem;
+
+  width: 60%;
+  height: 2.7rem;
+  font-size: 1.3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -3,12 +3,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
 }
 
 .img-logo {
   width: 14rem;
-  margin-top: 10rem;
+  margin-top: 3rem;
 }
 
 .form {
@@ -19,11 +19,13 @@
 }
 
 .form-input {
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  width: 60vw;
-  height: 1.4rem;
-  border: 1px solid #142141;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  width: 70vw;
+  height: 2.1rem;
+  border: 1px solid #233153;
+
+  font-size: 1rem;
 }
 
 .form-input:hover {
@@ -33,21 +35,29 @@
 .btn-entrar {
   background: none;
   border: 1px solid #8397c8;
-  width: 16vh;
-  height: 2rem;
-  border-radius: 1rem;
+  width: 18vh;
+  height: 2.3rem;
+  border-radius: 0.6rem;
+  color: #8397c8;
+
+  font-size: 1rem;
+}
+
+.btn-entrar:hover {
+  background-color: #8397c8;
+  color: white;
 }
 
 .outros {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 1.6rem;
 }
 
-a{
-    text-decoration: none;
-    color: #8397c8;
+.cadastro {
+  text-decoration: none;
+  color: #8397c8;
 }
 
 p {
