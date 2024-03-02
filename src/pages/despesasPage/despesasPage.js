@@ -1,9 +1,45 @@
-import "./despesasPage.css";
-
-import HeaderComponent from "../../components/header/HeaderComponent";
-import DespesaComponent from "../../components/despesaComponent/despesaComponent";
+import React, { useState, useEffect } from 'react';
+import HeaderComponent from '../../components/header/HeaderComponent';
+import DespesaComponent from '../../components/despesaComponent/despesaComponent';
+import './despesasPage.css';
 
 function DespesasPage() {
+  const [categoria, setCategoria] = useState('');
+  const [valor, setValor] = useState('');
+  const [despesas, setDespesas] = useState([]);
+  const [totalDespesas, setTotalDespesas] = useState(0);
+
+  // Função para recuperar as despesas armazenadas no localStorage
+  useEffect(() => {
+    const despesasFromStorage = JSON.parse(localStorage.getItem('despesas'));
+    if (despesasFromStorage) {
+      setDespesas(despesasFromStorage);
+    }
+  }, []);
+
+  const handleCategoriaChange = (event) => {
+    setCategoria(event.target.value);
+  };
+
+  const handleValorChange = (event) => {
+    setValor(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    if (categoria.trim() !== '' && valor.trim() !== '') {
+      const novaDespesa = { nomeDespesa: categoria, valorDespesa: parseFloat(valor) };
+      setDespesas([...despesas, novaDespesa]);
+      localStorage.setItem('despesas', JSON.stringify([...despesas, novaDespesa]));
+      setCategoria('');
+      setValor('');
+    }
+  };
+
+  useEffect(() => {
+    const total = despesas.reduce((acc, despesa) => acc + parseFloat(despesa.valorDespesa), 0);
+    setTotalDespesas(total);
+  }, [despesas]);
+
   return (
     <main>
       <HeaderComponent />
@@ -12,21 +48,24 @@ function DespesasPage() {
           <h1 className="despesah1">Despesas</h1>
         </div>
         <div>
-          <a className="add-despesas" href="/">Adicionar Despesa</a>
+          <h1 className="add-despesas">Adicionar Despesa</h1>
         </div>
-        <DespesaComponent nomeDespesa={"Netflix"} valorDespesa={"R$ 40,00"} />
-        <DespesaComponent nomeDespesa={"Eletricidade"} valorDespesa={"R$ 120,00"} />
-        <DespesaComponent nomeDespesa={"Internet"} valorDespesa={"R$ 60,00"} />
-        <DespesaComponent nomeDespesa={"Aguá"} valorDespesa={"R$ 30,00"} />
-        <DespesaComponent nomeDespesa={"Telefone"} valorDespesa={"R$ 45,00"} />
-        <DespesaComponent nomeDespesa={"Transporte"} valorDespesa={"R$ 70,00"} />
-        <DespesaComponent nomeDespesa={"Comida"} valorDespesa={"R$ 90,00"} />
-        <DespesaComponent nomeDespesa={"Academia"} valorDespesa={"R$ 120,00"} />
-        <DespesaComponent nomeDespesa={"Transporte Público"} valorDespesa={"R$ 60,00"} />
-        <DespesaComponent nomeDespesa={"Presentes"} valorDespesa={"R$ 80,00"} />
-        <DespesaComponent nomeDespesa={"Assinatura de Revista"} valorDespesa={"R$ 25,00"} />
-        <DespesaComponent nomeDespesa={"Gás de Cozinha"} valorDespesa={"R$ 50,00"} />
 
+        <div className='inputs'>
+          <input className='input' placeholder="Categoria" value={categoria} onChange={handleCategoriaChange}></input>
+          <input className='input' placeholder="Valor" value={valor} onChange={handleValorChange}></input>
+          <button className='btn-input' onClick={handleSubmit}>Adicionar Despesa</button>
+        </div>
+
+        <div>
+          {despesas.map((despesa, index) => (
+            <DespesaComponent key={index} nomeDespesa={despesa.nomeDespesa} valorDespesa={despesa.valorDespesa} />
+          ))}
+        </div>
+
+        <div className="total-despesas">
+          <p>Total de Despesas: R$ {totalDespesas.toFixed(2)}</p>
+        </div>
       </div>
     </main>
   );
