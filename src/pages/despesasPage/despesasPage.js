@@ -68,10 +68,8 @@ function DespesasPage() {
           <p>Total de Despesas: R$ {totalDespesas.toFixed(2)}</p>
         </div>
 
-        <div>
-          <h1 className="add-despesas">Adicionar Despesa</h1>
-        </div>
-
+        <br></br>
+    
         <div className="inputs">
           <input
             className="input"

@@ -73,9 +73,7 @@ function GanhosPage() {
         <div className="total-despesas">
           <p>Total de ganhos: R$ {totalGanhos.toFixed(2)}</p>
         </div>
-        <div>
-          <h1 className="add-despesas">Adicionar Ganhos</h1>
-        </div>
+        <br></br>
 
         <div className="inputs">
           <input
