@@ -3,6 +3,8 @@ import HeaderComponent from "../../components/header/HeaderComponent";
 import DespesaComponent from "../../components/despesaComponent/despesaComponent";
 import "./ganhosPage.css";
 
+import Seta from "../../assets/img/seta.png";
+
 function GanhosPage() {
   const [categoria, setCategoria] = useState("");
   const [valor, setValor] = useState("");
@@ -67,9 +69,13 @@ function GanhosPage() {
     <main>
       <HeaderComponent />
       <div className="main-despesas">
-        <div>
-          <h1 className="despesah1">Ganhos</h1>
+        <div className="seta">
+          <a href="/principal"><img class="seta-img" src={Seta} alt="" /></a>
         </div>
+        <div class="despesa-seta">
+          <h1 class="despesah1">Ganhos</h1>
+        </div>
+
         <div className="total-despesas">
           <p>Total de ganhos: R$ {totalGanhos.toFixed(2)}</p>
         </div>

@@ -3,6 +3,8 @@ import HeaderComponent from "../../components/header/HeaderComponent";
 import DespesaComponent from "../../components/despesaComponent/despesaComponent";
 import "./despesasPage.css";
 
+import Seta from "../../assets/img/seta.png";
+
 function DespesasPage() {
   const [categoria, setCategoria] = useState("");
   const [valor, setValor] = useState("");
@@ -60,6 +62,11 @@ function DespesasPage() {
     <main>
       <HeaderComponent />
       <div className="main-despesas">
+
+      <div className="seta">
+          <a href="/principal"><img class="seta-img" src={Seta} alt="" /></a>
+        </div>
+        
         <div>
           <h1 className="despesah1">Despesas</h1>
         </div>
