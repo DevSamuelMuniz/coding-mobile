@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HeaderComponent from "../../components/header/HeaderComponent";
 import DespesaComponent from "../../components/despesaComponent/despesaComponent";
-import SaldoComponent from "../../components/saldoComponent/saldoComponent";
 import "./ganhosPage.css";
 
 function GanhosPage() {
@@ -10,7 +9,7 @@ function GanhosPage() {
   const [ganhos, setGanhos] = useState([]);
   const [despesas, setDespesas] = useState([]);
   const [totalGanhos, setTotalGanhos] = useState(0);
-  const [totalDespesas, setTotalDespesas] = useState(0);
+  const [setTotalDespesas] = useState(0);
 
   useEffect(() => {
     const ganhosFromStorage = JSON.parse(localStorage.getItem("ganhos"));
