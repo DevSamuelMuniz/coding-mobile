@@ -30,7 +30,7 @@ function LoginPage() {
             Não possui conta? <a className="cadastro" href="/Cadastro">Cadastre-se</a>
           </p>
           <p>
-            Esqueceu sua senha? <a className="cadastro" href="/Esqueceu-a-Senha">Recuperar</a>
+            Esqueceu sua senha? <a className="cadastro" href="/">Recuperar</a>
           </p>
         </div>
       </div>
