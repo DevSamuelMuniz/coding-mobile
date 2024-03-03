@@ -35,6 +35,13 @@ function DespesasPage() {
     }
   };
 
+  const handleDeleteDespesa = (index) => {
+    const novasDespesas = [...despesas];
+    novasDespesas.splice(index, 1);
+    setDespesas(novasDespesas);
+    localStorage.setItem('despesas', JSON.stringify(novasDespesas));
+  };
+
   useEffect(() => {
     const total = despesas.reduce((acc, despesa) => acc + parseFloat(despesa.valorDespesa), 0);
     setTotalDespesas(total);
@@ -57,9 +64,12 @@ function DespesasPage() {
           <button className='btn-input' onClick={handleSubmit}>Adicionar Despesa</button>
         </div>
 
-        <div className='despesas'>
+        <div>
           {despesas.map((despesa, index) => (
-            <DespesaComponent key={index} nomeDespesa={despesa.nomeDespesa} valorDespesa={despesa.valorDespesa} />
+            <div key={index} className="despesa-item">
+              <DespesaComponent nomeDespesa={despesa.nomeDespesa} valorDespesa={despesa.valorDespesa} />
+              <button className="delete-btn" onClick={() => handleDeleteDespesa(index)}>Apagar</button>
+            </div>
           ))}
         </div>
 
