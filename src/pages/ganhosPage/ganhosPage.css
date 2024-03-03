@@ -81,12 +81,12 @@
 .seta-img {
     width: 2.3rem;
     rotate: 180deg;
+    margin-bottom: -3.8rem;
 }
 
 .seta{
-    width: 100vw;
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-left: 20%;
+    padding-right: 80%;
 }
