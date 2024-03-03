@@ -9,7 +9,7 @@ function GanhosPage() {
   const [ganhos, setGanhos] = useState([]);
   const [despesas, setDespesas] = useState([]);
   const [totalGanhos, setTotalGanhos] = useState(0);
-  const [setTotalDespesas] = useState(0);
+  const [totalDespesas, setTotalDespesas] = useState(0); // Correção aqui
 
   useEffect(() => {
     const ganhosFromStorage = JSON.parse(localStorage.getItem("ganhos"));
