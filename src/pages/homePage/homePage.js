@@ -47,8 +47,8 @@ function HomePage() {
         despesasTotais={totalDespesas}
       />
       <div className="btn-comp">
-        <ButtonComponent link={"/Despesas"} titulo="Minhas Despesas" />
         <ButtonComponent link={"/Ganhos"} titulo="Meus Ganhos" />
+        <ButtonComponent link={"/Despesas"} titulo="Minhas Despesas" />
         {/* <ButtonComponent link={"/"} titulo="Meu Perfil" /> */}
       </div>
     </main>
