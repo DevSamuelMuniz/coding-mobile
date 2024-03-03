@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import "./saldoComponent.css";
 
 function SaldoComponent({ ganhosTotais, despesasTotais }) {
-    // Calcular o saldo atual
     const saldoAtual = (ganhosTotais - despesasTotais).toFixed(2);
 
     return (
