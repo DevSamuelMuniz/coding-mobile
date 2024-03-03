@@ -4,6 +4,7 @@ import LoginPage from "./pages/loginPage/loginPage";
 import CadastroPage from "./pages/cadastroPage/cadastroPage";
 import HomePage from "./pages/homePage/homePage";
 import DespesasPage from "./pages/despesasPage/despesasPage";
+import GanhosPage from "./pages/ganhosPage/ganhosPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/Cadastro" element={<CadastroPage />} />
         <Route path="/Principal" element={<HomePage />} />
         <Route path="/Despesas" element={<DespesasPage />} />
+        <Route path="/Ganhos" element={<GanhosPage />} />
       </Routes>
     </Router>
   );
