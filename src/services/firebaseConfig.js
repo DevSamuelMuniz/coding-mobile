@@ -7,7 +7,7 @@ const firebaseConfig = {
   projectId: "finamo-auth",
   storageBucket: "finamo-auth.appspot.com",
   messagingSenderId: "958662275892",
-  appId: "1:958662275892:web:2ca24b36ed1b2c91896b61"
+  appId: "1:958662275892:web:2ca24b36ed1b2c91896b61",
 };
 
 const app = initializeApp(firebaseConfig);

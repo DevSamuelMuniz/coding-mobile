@@ -70,7 +70,9 @@ function GanhosPage() {
       <HeaderComponent />
       <div className="main-despesas">
         <div className="seta">
-          <a href="/principal"><img class="seta-img" src={Seta} alt="" /></a>
+          <a href="/principal">
+            <img class="seta-img" src={Seta} alt="" />
+          </a>
         </div>
         <div class="despesa-seta">
           <h1 class="despesah1">Ganhos</h1>

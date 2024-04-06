@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./saldoComponent.css";
-import som from "../../assets/audio/som.mp3"; 
+import som from "../../assets/audio/som.mp3";
 
 function SaldoComponent({ ganhosTotais, despesasTotais }) {
   const saldoAtual = (ganhosTotais - despesasTotais).toFixed(2);

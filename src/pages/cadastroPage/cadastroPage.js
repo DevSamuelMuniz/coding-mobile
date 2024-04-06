@@ -3,33 +3,31 @@ import React, { useState } from "react";
 import Logo from "../../assets/img/logo.png";
 
 //auth firebase
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../services/firebaseConfig";
 
-function redirectLogin(){
+function redirectLogin() {
   window.location.href = "/";
 }
 
 function CadastroPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
-  const [
-    createUserWithEmailAndPassword, user, loading, error] =
-     useCreateUserWithEmailAndPassword(auth);
-
-  function handleSignOut(e){
+  function handleSignOut(e) {
     e.preventDefault();
     createUserWithEmailAndPassword(email, password);
   }
 
-  if(loading){
-    return <p>Carregando...</p>
+  if (loading) {
+    return <p>Carregando...</p>;
   }
 
-  if(user){
-    console.log(user)
+  if (user) {
+    console.log(user);
   }
 
   return (
@@ -45,24 +43,23 @@ function CadastroPage() {
             type="email"
             placeholder="Seu Email"
             onChange={(e) => setEmail(e.target.value)}
-            />
+          />
 
-          <input 
-            className="form-input" 
-            type="password" 
-            placeholder="Sua Senha" 
+          <input
+            className="form-input"
+            type="password"
+            placeholder="Sua Senha"
             onChange={(e) => setPassword(e.target.value)}
-            />
+          />
 
-          <button 
-          className="btn-entrar" 
-          type="button" onClick={handleSignOut}>
+          <button className="btn-entrar" type="button" onClick={handleSignOut}>
             Cadastrar
           </button>
 
-
           <div className="outros">
-            <a className="cadastro" href="/">Voltar</a>
+            <a className="cadastro" href="/">
+              Voltar
+            </a>
           </div>
         </form>
       </div>

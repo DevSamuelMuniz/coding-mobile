@@ -1,7 +1,7 @@
 import "./loginPage.css";
 import React, { useState } from "react";
 import Logo from "../../assets/img/logo.png";
-import { useNavigate } from "react-router-dom"; // Importe useNavigate
+import { useNavigate } from "react-router-dom";
 
 //firebase
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -54,7 +54,7 @@ function LoginPage() {
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            />
+          />
 
           <button className="btn-entrar" type="submit">
             Entrar

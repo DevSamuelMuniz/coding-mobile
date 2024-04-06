@@ -1,14 +1,13 @@
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 0.5px solid #8397c8;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5px solid #8397c8;
 
-    margin-bottom: -3rem;
+  margin-bottom: -3rem;
 }
 
-.logo{
-    margin: 1rem 0;
-    width: 5rem;
+.logo {
+  margin: 1rem 0;
+  width: 5rem;
 }
-

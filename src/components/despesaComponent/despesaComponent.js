@@ -1,6 +1,6 @@
 import "./despesaComponent.css";
 
-function DespesaComponent({valorDespesa, nomeDespesa}) {
+function DespesaComponent({ valorDespesa, nomeDespesa }) {
   return (
     <main className="despesas-content">
       <h2>{nomeDespesa}</h2>
